@@ -5,7 +5,7 @@ public class Tommaso_di_benedetto
 
 	public static void main (String[] args)
 	{
-		/*System.out.println("primo esercizio");
+		System.out.println("primo esercizio");
 		System.out.println("inserire la quantità degli indici del primo array:");
 		int k = Integer.parseInt(in.nextLine());
 		int [] primo = new int [k];
@@ -47,11 +47,13 @@ public class Tommaso_di_benedetto
 					swap(terzo, j,j+1);
 			}
 		}
+		System.out.println("la stringa invertita:");
 		for (int j = 0; j < terzo.length; j++)
 		{
 			System.out.print("|" + terzo [j]);
-		}*/
-		SecondoArray();
+		}
+		System.out.println();
+		SecondoArray ();
 	}
 	public static void swap (int [] terzo, int a, int b)
 	{
@@ -63,37 +65,30 @@ public class Tommaso_di_benedetto
 	{
 		int m = 0;
 		System.out.println("secondo esercizio");
-		System.out.println("inserire la quantità degli indici del secondo array:");
+		System.out.println("inserire la quantità degli indici del array:");
 		int n = Integer.parseInt(in.nextLine());
 		int [] random = new int [n];
-		System.out.println("DEBUG: " + ++m);
-		for (int i = 0; i < random.length; i++)
-		{			
+		for (int i = 0; i < random.length; i++)		
 			random[i] = (int) (Math.random()*20)-10;
-		}
-		int k = 0;				
 		
-
+		int k = 0;
 		for (int i = 0; i < random.length; i++)
-		{
 			if (random[i] >= 0)
-			{
 				k++;
-			}
-		}
 
 		int [] selezionati = new int [k];
 		int j = 0;
-		for (int i = 0; i < selezionati.length; i++)
-		{
-			System.out.println("ciao");
+		for (int i = 0; i < random.length; i++)
 			if (random[i] >= 0)
 			{
 				selezionati [j] = random[i];
 				j += 1;
 			}
-		}
+		
+		System.out.println("i numeri maggiori o uguali a zero sono:");
 		for (int i = 0; i < selezionati.length; i++)
-			System.out.print("|" + selezionati [j]);
+		{
+			System.out.print("|" + selezionati [i]);
+		}
 	}
 }
